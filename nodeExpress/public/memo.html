@@ -2,38 +2,99 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<style type="text/css">
+			body{
+				padding: 5px;
+			}
+			input{
+			    width: 100%;
+			    height: 34px;
+			    padding: 6px 12px;
+			    font-size: 14px;
+			    line-height: 1.42857143;
+			    color: #555;
+			    background-color: #fff;
+			    border: 1px solid #ccc;
+			    border-collapse: collapse;
+			}
+			.input-group{
+				display: flex;
+				flex-direction:row;
+				flex-wrap:nowrap;
+				justify-content:center;
+				width: 100%;
+			    border-collapse: collapse;
+			}
+			.input-group > input{
+				display: flex;
+				width: 70%;
+			    border-collapse: collapse;
+			}
+			.input-group > span{
+				display: flex;
+				width: 30%;
+			    height: 34px;
+			    padding: 6px 12px;
+			    font-size: 14px;
+			    line-height: 1.42857143;
+			    color: #555;
+			    background-color: #eee;
+			    background-image: none;
+			    border: 1px solid #ccc;
+			    border-collapse: collapse;
+			}
+		</style>
 		<title>메모</title>
 	</head>
 <body>
 	<h1>로그인</h1>
 	<br>
 	<form method="post" enctype="multipart/form-data" action="/process/memo">
-		<table>
-			<tr>
-				<td><label>작성자</label></td>
-				<td><input type="text" name="id" /></td>
-			</tr>
-			<tr>
-				<td><label>작성일시</label></td>
-				<td><input type="datetime" name="time" /></td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<label>내용</label>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input type="text" name='memo'>
-				</td>
-			</tr>
-			<tr>
-				<td><label>파일</label></td>
-				<td><input type="file" name="photo" /></td>
-			</tr>
-		</table>
-		<input type="submit" value="저장" name=""/>
-		<input type="button" value="닫기" name=""/>
-	</form>
+<!-- 		<table> -->
+<!-- 			<tr> -->
+<!-- 				<td><label>작성자</label></td> -->
+<!-- 				<td><input type="text" name="id" /></td> -->
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 				<td><label>작성일시</label></td> -->
+<!-- 				<td><input type="datetime" name="time" /></td> -->
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 				<td colspan="2"> -->
+<!-- 					<label>내용</label> -->
+<!-- 				</td> -->
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 				<td colspan="2"> -->
+<!-- 					<input type="text" name='memo'> -->
+<!-- 				</td> -->
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 				<td><label>파일</label></td> -->
+<!-- 				<td><input type="file" name="photo" /></td> -->
+<!-- 			</tr> -->
+<!-- 		</table> -->
+<!-- 		<input type="submit" value="저장" name=""/> -->
+<!-- 		<input type="button" value="닫기" name=""/> -->
+<!-- 	</form> -->
+
+			<div class="input-group" >
+		  		<span class="input-group-addon" id="basic-addon1" >아이디</span>
+		  		<input type="text" class="form-control" placeholder="아이디" aria-describedby="basic-addon1" name="id" >
+			</div>
+			<div class="input-group"  >
+		  		<span class="input-group-addon" id="basic-addon1" >비밀번호</span>
+		  		<input type="password" class="form-control" placeholder="비밀번호" aria-describedby="basic-addon1" name="password" >
+			</div>
+			<div class="input-group"  >
+		  		<span class="input-group-addon" id="basic-addon1" >사용자명</span>
+		  		<input type="text" class="form-control" placeholder="사용자명" aria-describedby="basic-addon1" name="name" >
+			</div>
+			<div class="input-group"  >
+		  		<span class="input-group-addon" id="basic-addon1" >파일</span>
+		  		<input type="file" name="photo" />
+			</div>
+			<input type="submit" value="전송" name="" style="margin-top: 10px"/>
+		</form>
 </body>
 </html>
